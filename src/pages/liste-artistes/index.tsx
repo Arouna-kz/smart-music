@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
+
 
 export default function ArtistList() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -39,7 +41,8 @@ export default function ArtistList() {
         {filteredArtists.length > 0 ? (
           filteredArtists.map((artist, index) => (
             <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-              <img src={artist.image} alt={artist.name} className="w-full h-98 object-cover rounded-t-lg" />
+              <Image src={artist.image} alt={artist.name} width={300} height={256} className="w-full h-98 object-cover rounded-md" />
+              
               <h2 className="text-2xl font-bold text-yellow-500 mt-4">{artist.name}</h2>
               <p className="text-gray-400 mt-2">{artist.description}</p>
 

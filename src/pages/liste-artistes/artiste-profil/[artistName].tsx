@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Image from "next/image";
 
 
 export default function ArtistProfile() {
@@ -31,11 +32,8 @@ export default function ArtistProfile() {
     <div className="min-h-screen bg-black text-white p-8">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row items-center md:items-start">
-        <img 
-          src={artist.image} 
-        //   alt={artist.name} 
-          className="w-40 h-40 object-cover rounded-full border-4 border-yellow-500 mb-4 md:mb-0 md:mr-8"
-        />
+        <Image src={artist.image} alt="" width={300} height={256} className="w-40 h-40 object-cover rounded-full border-4 border-yellow-500 mb-4 md:mb-0 md:mr-8" />
+        
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold text-yellow-500">{artist.name}</h1>
           <p className="mt-4">{artist.bio}</p>
@@ -52,11 +50,8 @@ export default function ArtistProfile() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"> {/* Plus de colonnes et moins d'espace */}
     {artist.currentWorks.map((work, index) => (
       <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-md"> {/* Réduction du padding */}
-        <img 
-          src={work.image} 
-          alt={work.title} 
-          className="w-full h-90 object-cover rounded-md mb-2" 
-        />
+        <Image src={work.image} alt={work.title} width={300} height={256} className="w-full h-90 object-cover rounded-md mb-2" />
+
         <h3 className="text-lg font-bold text-yellow-500">{work.title}</h3> {/* Taille du texte réduite */}
         <p className="text-gray-400 text-sm">Type: {work.mediaType}</p> {/* Texte plus petit */}
         <p className="text-gray-400 text-sm">Disponible: {work.available} NFT(s)</p>
@@ -75,11 +70,8 @@ export default function ArtistProfile() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"> {/* Diminution de l'écart */}
     {artist.soldWorks.map((work, index) => (
       <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-md"> {/* Réduction du padding */}
-        <img 
-          src={work.image} 
-          alt={work.title} 
-          className="w-full h-90 object-cover rounded-md mb-2" 
-        />
+        <Image src={work.image} alt={work.title} width={300} height={256} className="w-full h-98 object-cover rounded-md" />
+        
         <h3 className="text-lg font-bold text-yellow-500">{work.title}</h3> {/* Texte réduit */}
         <p className="text-gray-400 text-sm">Type: {work.mediaType}</p> {/* Réduction de la taille du texte */}
         <p className="text-md font-bold text-yellow-500 mt-2">Vendu pour {work.soldFor}</p> {/* Police ajustée */}

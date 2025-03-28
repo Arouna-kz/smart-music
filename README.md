@@ -65,7 +65,7 @@ Clique sur Create repository.
 
 🔹 4. Lier ton projet au dépôt GitHub
 Copie l’URL fournie par GitHub (ex: https://github.com/ton-utilisateur/mon-projet-nextjs.git) et exécute la commande suivante :
-COMMANDE: git remote add origin https://github.com/ton-utilisateur/mon-projet-nextjs.git
+COMMANDE: git remote add origin https://github.com/Arouna-kz/smart-music.git
 
 Vérifie si le remote est bien ajouté :
 COMMANDE: git remote -v

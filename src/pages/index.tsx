@@ -1,9 +1,9 @@
 'use client';
-import { useState } from 'react';
+import Image from "next/image";
 import Head from 'next/head';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Import Swiper styles
-import { Autoplay, EffectFade, EffectCube, Pagination } from 'swiper/modules'; // Ajout des effets et modules
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules'; // Ajout des effets et modules
 
 export default function Home() {
 
@@ -54,28 +54,28 @@ export default function Home() {
           >
             <SwiperSlide>
               <div className="bg-black border border-yellow-500 p-6 rounded-lg hover:shadow-lg transition-shadow">
-                <img src="/images/default/cd1.jpg" alt="NFT 1" className="w-full h-64 object-cover rounded-md" />
+                <Image src="/images/default/cd1.jpg" alt="NFT 1" width={300} height={256} className="w-full h-64 object-cover rounded-md" />
                 <h3 className="text-xl font-semibold mt-4">DJ Arafat - Clip Exclu</h3>
                 <p className="text-gray-400">Une performance incroyable de DJ Arafat dans un clip jamais vu.</p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="bg-black border border-yellow-500 p-6 rounded-lg hover:shadow-lg transition-shadow">
-                <img src="/images/default/cd1.jpg" alt="NFT 2" className="w-full h-64 object-cover rounded-md" />
+                <Image src="/images/default/cd1.jpg" alt="NFT 1" width={300} height={256} className="w-full h-64 object-cover rounded-md" />
                 <h3 className="text-xl font-semibold mt-4">Josey - Nouveaux Sons</h3>
                 <p className="text-gray-400">Écoutez le dernier titre exclusif de Josey, disponible en NFT.</p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="bg-black border border-yellow-500 p-6 rounded-lg hover:shadow-lg transition-shadow">
-                <img src="/images/default/cd1.jpg" alt="NFT 3" className="w-full h-64 object-cover rounded-md" />
+                <Image src="/images/default/cd1.jpg" alt="NFT 1" width={300} height={256} className="w-full h-64 object-cover rounded-md" />
                 <h3 className="text-xl font-semibold mt-4">Kerozen - Clip inédit</h3>
                 <p className="text-gray-400">Un clip exclusif de Kerozen avec des beats enflammés.</p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="bg-black border border-yellow-500 p-6 rounded-lg hover:shadow-lg transition-shadow">
-                <img src="/images/default/cd1.jpg" alt="NFT 1" className="w-full h-64 object-cover rounded-md" />
+                <Image src="/images/default/cd1.jpg" alt="NFT 1" width={300} height={256} className="w-full h-64 object-cover rounded-md" />
                 <h3 className="text-xl font-semibold mt-4">Didi B - Clip Exclu</h3>
                 <p className="text-gray-400">Une performance incroyable de Didi B dans un clip jamais vu.</p>
               </div>

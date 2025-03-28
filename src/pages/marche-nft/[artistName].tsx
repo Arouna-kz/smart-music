@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import Image from "next/image";
 
 export default function ArtistMarketplace() {
   const router = useRouter();
@@ -11,9 +12,9 @@ export default function ArtistMarketplace() {
   const [maxPrice, setMaxPrice] = useState('');
 
   const nfts = [
-    { title: 'NFT 1', genre: 'Hip-Hop', mediaType: 'Audio', price: '0.5 ETH', available: 10, image: '/nft1.jpg' },
-    { title: 'NFT 2', genre: 'Pop', mediaType: 'Video', price: '1.2 ETH', available: 0, image: '/nft2.jpg' }, // Indisponible pour l'exemple
-    { title: 'NFT 3', genre: 'Rock', mediaType: 'Audio', price: '0.8 ETH',available: 100, image: '/nft3.jpg' },
+    { title: 'NFT 1', genre: 'Hip-Hop', mediaType: 'Audio', price: '0.5 ETH', available: 10, image: '/images/default/cd1.jpg' },
+    { title: 'NFT 2', genre: 'Pop', mediaType: 'Video', price: '1.2 ETH', available: 0, image: '/images/default/cd1.jpg' }, // Indisponible pour l'exemple
+    { title: 'NFT 3', genre: 'Rock', mediaType: 'Audio', price: '0.8 ETH',available: 100, image: '/images/default/cd1.jpg' },
   ];
 
   // Filtrer les NFTs en fonction des critères de recherche
@@ -89,11 +90,8 @@ export default function ArtistMarketplace() {
             </div>
 
             {/* Image du NFT */}
-            <img 
-              src={nft.image} 
-              alt={nft.title} 
-              className="w-full h-36 object-cover rounded-md mb-4" 
-            />
+            
+          <Image src={nft.image} alt={nft.title} width={300} height={256} className="w-full h-36 object-cover rounded-md mb-4" />
 
             {/* Titre du NFT */}
             <h2 className="text-lg font-bold text-yellow-500 text-center mb-3">{nft.title}</h2>

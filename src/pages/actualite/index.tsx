@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Image from "next/image";
+
 
 // TypeScript type for news articles
 type NewsArticle = {
@@ -45,11 +47,8 @@ const Actuality: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {newsArticles.map((article, index) => (
           <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all">
-            <img
-              src={article.image}
-              alt={article.title}
-              className="w-full h-98 object-cover rounded-md mb-4"
-            />
+            <Image src={article.image} alt={article.title} width={300} height={256} className="w-full h-98 object-cover rounded-md" />
+
             <div className="flex justify-between items-center mb-2">
               <span className="text-yellow-500 font-bold">{article.category}</span>
               <span className="text-gray-400 text-sm">{article.date}</span>
