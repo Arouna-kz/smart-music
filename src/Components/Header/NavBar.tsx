@@ -19,11 +19,10 @@ const NavBar: React.FC = () => {
   }
 
   return (
-    <nav className="bg-black p-6 shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold text-yellow-500">Smart Music</div>
-        
-        <div className="hidden md:flex space-x-6">
+    <nav className="bg-black p-6 shadow-lg sticky top-0 z-50 w-full">
+    <div className="container mx-auto flex justify-between items-center gap-4">
+      <div className="text-2xl font-bold text-yellow-500 flex-shrink-0">Smart Music</div>
+        <div className="hidden md:flex space-x-6 items-center">
           <Link href="/" className="hover:text-yellow-400 text-white">Accueil</Link>
           <Link href="/liste-artistes" className="hover:text-yellow-400 text-white">Marché des NFTs</Link>
           <Link href="/actualite/" className="hover:text-yellow-400 text-white">Actualités</Link>
@@ -94,7 +93,7 @@ const NavBar: React.FC = () => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden mt-4 space-y-4 bg-black p-4">
+        <div className="md:hidden bg-black p-4 space-y-3">
           <Link href="/" className="block text-yellow-500 hover:text-yellow-400">Accueil</Link>
           <Link href="/liste-artistes" className="block text-yellow-500 hover:text-yellow-400">Marché des NFTs</Link>
           <Link href="/actualite/" className="block text-yellow-500 hover:text-yellow-400">Actualités</Link>

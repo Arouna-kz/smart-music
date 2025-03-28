@@ -119,3 +119,5 @@ Si ton projet est connecté à GitHub, chaque git push sur main ou master décle
 
 Sinon, utilise :
 COMMANDE :  vercel --prod
+
+Lien du site sur vercel=> https://smart-music-6t7hcv6qn-kone-zie-arounas-projects.vercel.app
