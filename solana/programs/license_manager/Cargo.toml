@@ -1,0 +1,9 @@
+[package]
+name = "license_manager"
+version = "0.1.0"
+description = "License manager Program"
+edition = "2021"
+
+[dependencies]
+anchor-lang = { version = "0.28.0", features = ["init-if-needed"] }
+anchor-spl = "0.28.0"

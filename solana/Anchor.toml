@@ -1,0 +1,13 @@
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[programs.devnet]
+music_nft = "VOTRE_PROGRAM_ID_MUSIC_NFT"
+marketplace = "VOTRE_PROGRAM_ID_MARKETPLACE"
+crowdfunding_dao = "VOTRE_PROGRAM_ID_DAO"
+license_manager = "VOTRE_PROGRAM_ID_LICENSE"
+streaming_revenue = "VOTRE_PROGRAM_ID_STREAMING"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
